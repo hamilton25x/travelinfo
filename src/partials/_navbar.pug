@@ -1,0 +1,19 @@
+mixin link(url,name)
+  if(path===url)
+    li.nav-item.active.ml-lg-3
+      a.nav-link(href=url)
+        | #{name}
+  else
+    li.nav-item.ml-lg-3
+      a.nav-link(href=url)
+        | #{name}
+
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+  a.navbar-brand(href='#')
+    img(src='images/logo.png', width='35', height='35', alt='logo')
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.ml-auto
+      each item in menu.list
+        +link(item.url,item.name)

@@ -1,0 +1,70 @@
+extend _layout.pug
+
+block navbar
+  - var path='index.html'
+  include partials/_navbar.pug
+
+block header
+  header.container-fluid
+    .bg-video.h-100
+      video(class="bg-video-content" poster="images/Cheering-Crowd.jpg" autoplay muted loop)
+        source(src="images/Cheering-Crowd.mp4" type="video/mp4")
+        source(src="images/Cheering-Crowd.ogv" type="video/ogg")
+        source(src="images/Cheering-Crowd.webm" type="video/webm")
+        | 您的瀏覽器不支援!  
+    .container.h-100
+      .row.h-100
+        .col.text-center.d-flex.flex-column.justify-content-center
+          h1.mb-5.display-4.font-weight-light 放鬆的旅遊行程
+          a(href="#").btn.btn-lg.btn-primary.align-self-center.px-5 查看更多
+
+block content
+  section.room.py-5
+    .container
+      .row
+        .col.text-center.mb-3
+          h2.text-secondary.heading 旅遊行程
+
+      .row.justify-content-around.align-items-center
+        .col-lg-4.col-sm-8.rotate
+          .card.text-center.mb-3.room-card
+            .card-header
+              h3 北部兩天一夜
+            .card-body
+              img(src="images/room1.jpg", alt="",class="img-fluid rounded")
+            .card-footer 2019年
+            .back
+              .back-content
+                h3.mb-3.font-weight-light 只要
+                h1.mb-3 5000元
+                p.mb-5
+                  del.text-secondary 6000元
+                a(href="#").btn.btn-lg.btn-primary.px-4 現在購買
+        .col-lg-4.col-sm-8.rotate
+          .card.text-center.mb-3.room-card
+            .card-header
+              h3 中部兩天一夜
+            .card-body
+              img(src="images/room2.jpg", alt="",class="img-fluid rounded")
+            .card-footer 2019年
+            .back
+              .back-content
+                h3.mb-3.font-weight-light 只要
+                h1.mb-3 4000元
+                p.mb-5
+                  del.text-secondary 5000元
+                a(href="#").btn.btn-lg.btn-primary.px-4 現在購買
+        .col-lg-4.col-sm-8.rotate
+          .card.text-center.mb-3.room-card
+            .card-header
+              h3 南部兩天一夜
+            .card-body
+              img(src="images/room3.jpg", alt="",class="img-fluid rounded")
+            .card-footer 2019年
+            .back
+              .back-content
+                h3.mb-3.font-weight-light 只要
+                h1.mb-3 3000元
+                p.mb-5
+                  del.text-secondary 4000元
+                a(href="#").btn.btn-lg.btn-primary.px-4 現在購買

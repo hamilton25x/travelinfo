@@ -1,0 +1,36 @@
+extend _layout.pug
+
+mixin area(name)
+  if(name==='請選擇區域')
+    option(value='' selected disabled) #{name}
+  else
+    option(value=name) #{name}
+
+mixin data(name,district,address,description)
+  .col-md-3.cardcol
+    .card.mb-3
+      .card-header.bg-info.text-white #{name}
+      .card-body
+        h5.card-title.text-info.district #{district}
+        h6.card-text.text-info #{address}
+        p.card-text.text-secondary
+          | #{description}
+
+block navbar
+  - var path='taichung.html'
+  include partials/_navbar.pug
+  
+block content
+  .container
+    form
+      .form-row.align-items-center.my-5
+        .col-3
+          label(for='select').mb-0 搜尋區域
+        .col-9
+          select#select.form-control
+            each item in taichungArea.list
+              +area(item.name)
+
+    .row
+      each item in taichungData.ROOT.RECORD
+        +data(item.名稱,item.鄉鎮市區,item.地址,item.簡述)

@@ -1,0 +1,28 @@
+{
+  "list": [
+    {
+      "no": 0,
+      "name": "台北101",
+      "urlPc": "images/landscape1-Pc.jpg",
+      "urlPhone": "images/landscape1-Phone.jpg"
+    },
+    {
+      "no": 1,
+      "name": "自由廣場",
+      "urlPc": "images/landscape2-Pc.jpg",
+      "urlPhone": "images/landscape2-Phone.jpg"
+    },
+    {
+      "no": 2,
+      "name": "九份",
+      "urlPc": "images/landscape3-Pc.jpg",
+      "urlPhone": "images/landscape3-Phone.jpg"
+    },
+    {
+      "no": 3,
+      "name": "饒河夜市",
+      "urlPc": "images/landscape4-Pc.jpg",
+      "urlPhone": "images/landscape4-Phone.jpg"
+    }
+  ]
+}
